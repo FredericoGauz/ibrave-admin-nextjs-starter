@@ -39,14 +39,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         : {};
     const meta = (Component as any).layoutProps?.meta || {};
     const description =
-        meta.metaDescription ||
-        meta.description ||
-        'A Next.js starter kit template with React 17 + Typescript + Tailwind CSS 2 + React Query 3 + GitHub Auth + Passwordless Auth + Fauna DB';
+        meta.metaDescription || meta.description || 'iBrave Admin';
 
     return (
         <QueryClientProvider client={queryClient}>
             <Provider session={pageProps.session}>
-                <Title suffix="Next Starter">
+                <Title suffix="iBrave Admin">
                     {meta.metaTitle || meta.title}
                 </Title>
                 <Description>{description}</Description>

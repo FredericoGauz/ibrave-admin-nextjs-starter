@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 export default function Meta() {
-    const baseUrl = 'https://next-starter.bhanuteja.dev';
+    const baseUrl = 'https://admin.ibraveapp.com';
     const router = useRouter();
     return (
         <Head>
