@@ -1,12 +1,13 @@
 import { useSession } from 'next-auth/client';
 import Image from 'next/image';
-import { NavBar } from '@/components';
+// import { NavBar } from '@/components';
 import { ReactNode } from 'react';
-
+import { CTA } from '../components/CTA';
 export default function Home() {
     const [session] = useSession();
     return (
         <div className="divide-y divide-gray-100">
+            {/* <CTA /> */}
             <main>
                 <div className="p-10">
                     {session && (
@@ -102,7 +103,6 @@ export default function Home() {
 function HomeLayout({ children }: { children: ReactNode }) {
     return (
         <>
-            <NavBar />
             <div className="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 {children}
             </div>

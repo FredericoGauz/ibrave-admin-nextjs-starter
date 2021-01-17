@@ -5,9 +5,13 @@ import { Provider } from 'next-auth/client';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { Title, Description, Meta } from '@/components';
+import WindmillLayout from '../containers/Layout';
 import React from 'react';
+import { AccessibleNavigationAnnouncer } from '../components/AccessibleNavigationAnnouncer';
+import { Windmill } from '@windmill/react-ui';
 import ProgressBar from '@badrap/bar-of-progress';
 import { Router } from 'next/router';
+import { SidebarProvider } from 'src/context/SidebarContext';
 
 const progress = new ProgressBar({
     size: 2,
@@ -44,14 +48,21 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         <QueryClientProvider client={queryClient}>
             <Provider session={pageProps.session}>
-                <Title suffix="iBrave Admin">
-                    {meta.metaTitle || meta.title}
-                </Title>
-                <Description>{description}</Description>
-                <Meta />
-                <Layout {...layoutProps}>
-                    <Component {...pageProps} />
-                </Layout>
+                <SidebarProvider>
+                    <Windmill usePreferences>
+                        <AccessibleNavigationAnnouncer />
+                        <Title suffix="iBrave Admin">
+                            {meta.metaTitle || meta.title}
+                        </Title>
+                        <Description>{description}</Description>
+                        <Meta />
+                        <Layout {...layoutProps}>
+                            <WindmillLayout>
+                                <Component {...pageProps} />
+                            </WindmillLayout>
+                        </Layout>
+                    </Windmill>
+                </SidebarProvider>
                 <ReactQueryDevtools initialIsOpen={false} />
             </Provider>
         </QueryClientProvider>
