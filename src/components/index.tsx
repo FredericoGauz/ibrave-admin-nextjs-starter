@@ -1,2 +1,2 @@
-export { default as NavBar } from './NavBar'
-export * from './seo'
+export { default as NavBar } from './NavBar';
+export * from './seo';
