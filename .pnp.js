@@ -81,6 +81,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                         'virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:1.1.2',
                                     ],
                                     ['classnames', 'npm:2.2.6'],
+                                    ['cssnano', 'npm:4.1.10'],
                                     ['eslint', 'npm:7.16.0'],
                                     [
                                         'eslint-config-prettier',
@@ -132,6 +133,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     ],
                                     ['npm-run-all', 'npm:4.1.5'],
                                     ['postcss', 'npm:8.2.1'],
+                                    ['postcss-selector-parser', 'npm:6.0.4'],
                                     ['prettier', 'npm:2.2.1'],
                                     ['react', 'npm:17.0.1'],
                                     [
@@ -2582,6 +2584,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'alphanum-sort',
+                    [
+                        [
+                            'npm:1.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/alphanum-sort-npm-1.0.2-78a592b492-28bad91719.zip/node_modules/alphanum-sort/',
+                                packageDependencies: [
+                                    ['alphanum-sort', 'npm:1.0.2'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'anser',
                     [
                         [
@@ -3879,6 +3897,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                 linkType: 'HARD',
                             },
                         ],
+                        [
+                            'npm:4.16.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/browserslist-npm-4.16.1-37866cfd90-56f51464c3.zip/node_modules/browserslist/',
+                                packageDependencies: [
+                                    ['browserslist', 'npm:4.16.1'],
+                                    ['caniuse-lite', 'npm:1.0.30001178'],
+                                    ['colorette', 'npm:1.2.1'],
+                                    ['electron-to-chromium', 'npm:1.3.641'],
+                                    ['escalade', 'npm:3.1.1'],
+                                    ['node-releases', 'npm:1.1.69'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
                     ],
                 ],
                 [
@@ -4098,8 +4132,53 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'caller-callsite',
+                    [
+                        [
+                            'npm:2.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/caller-callsite-npm-2.0.0-9cf308d7bb-4f62ec12d0.zip/node_modules/caller-callsite/',
+                                packageDependencies: [
+                                    ['caller-callsite', 'npm:2.0.0'],
+                                    ['callsites', 'npm:2.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'caller-path',
+                    [
+                        [
+                            'npm:2.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/caller-path-npm-2.0.0-7ff6a26cb9-c4b19e43d4.zip/node_modules/caller-path/',
+                                packageDependencies: [
+                                    ['caller-path', 'npm:2.0.0'],
+                                    ['caller-callsite', 'npm:2.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'callsites',
                     [
+                        [
+                            'npm:2.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/callsites-npm-2.0.0-cc39942b7f-0ccd42292b.zip/node_modules/callsites/',
+                                packageDependencies: [
+                                    ['callsites', 'npm:2.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
                         [
                             'npm:3.1.0',
                             {
@@ -4157,6 +4236,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'caniuse-api',
+                    [
+                        [
+                            'npm:3.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/caniuse-api-npm-3.0.0-1272c2981e-6822fb3d42.zip/node_modules/caniuse-api/',
+                                packageDependencies: [
+                                    ['caniuse-api', 'npm:3.0.0'],
+                                    ['browserslist', 'npm:4.16.1'],
+                                    ['caniuse-lite', 'npm:1.0.30001178'],
+                                    ['lodash.memoize', 'npm:4.1.2'],
+                                    ['lodash.uniq', 'npm:4.5.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'caniuse-lite',
                     [
                         [
@@ -4177,6 +4276,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     './.yarn/cache/caniuse-lite-npm-1.0.30001171-39b12b1e53-6c6a0cdf48.zip/node_modules/caniuse-lite/',
                                 packageDependencies: [
                                     ['caniuse-lite', 'npm:1.0.30001171'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                        [
+                            'npm:1.0.30001178',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/caniuse-lite-npm-1.0.30001178-18b3fd17fc-313a8c784a.zip/node_modules/caniuse-lite/',
+                                packageDependencies: [
+                                    ['caniuse-lite', 'npm:1.0.30001178'],
                                 ],
                                 linkType: 'HARD',
                             },
@@ -5087,6 +5197,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     'cosmiconfig',
                     [
                         [
+                            'npm:5.2.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/cosmiconfig-npm-5.2.1-4a84462a41-02d51fb288.zip/node_modules/cosmiconfig/',
+                                packageDependencies: [
+                                    ['cosmiconfig', 'npm:5.2.1'],
+                                    ['import-fresh', 'npm:2.0.0'],
+                                    ['is-directory', 'npm:0.3.1'],
+                                    ['js-yaml', 'npm:3.14.0'],
+                                    ['parse-json', 'npm:4.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                        [
                             'npm:7.0.0',
                             {
                                 packageLocation:
@@ -5281,6 +5406,40 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'css-color-names',
+                    [
+                        [
+                            'npm:0.0.4',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/css-color-names-npm-0.0.4-be9111e9bd-6842f38c3a.zip/node_modules/css-color-names/',
+                                packageDependencies: [
+                                    ['css-color-names', 'npm:0.0.4'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'css-declaration-sorter',
+                    [
+                        [
+                            'npm:4.0.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/css-declaration-sorter-npm-4.0.1-b49a53b330-9cd18a0cca.zip/node_modules/css-declaration-sorter/',
+                                packageDependencies: [
+                                    ['css-declaration-sorter', 'npm:4.0.1'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['timsort', 'npm:0.3.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'css-loader',
                     [
                         [
@@ -5464,6 +5623,87 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'cssnano',
+                    [
+                        [
+                            'npm:4.1.10',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/cssnano-npm-4.1.10-10e25c9634-7578b12389.zip/node_modules/cssnano/',
+                                packageDependencies: [
+                                    ['cssnano', 'npm:4.1.10'],
+                                    ['cosmiconfig', 'npm:5.2.1'],
+                                    ['cssnano-preset-default', 'npm:4.0.7'],
+                                    ['is-resolvable', 'npm:1.1.0'],
+                                    ['postcss', 'npm:7.0.35'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'cssnano-preset-default',
+                    [
+                        [
+                            'npm:4.0.7',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/cssnano-preset-default-npm-4.0.7-422631428b-7e947b0e09.zip/node_modules/cssnano-preset-default/',
+                                packageDependencies: [
+                                    ['cssnano-preset-default', 'npm:4.0.7'],
+                                    ['css-declaration-sorter', 'npm:4.0.1'],
+                                    ['cssnano-util-raw-cache', 'npm:4.0.1'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-calc', 'npm:7.0.5'],
+                                    ['postcss-colormin', 'npm:4.0.3'],
+                                    ['postcss-convert-values', 'npm:4.0.1'],
+                                    ['postcss-discard-comments', 'npm:4.0.2'],
+                                    ['postcss-discard-duplicates', 'npm:4.0.2'],
+                                    ['postcss-discard-empty', 'npm:4.0.1'],
+                                    ['postcss-discard-overridden', 'npm:4.0.1'],
+                                    ['postcss-merge-longhand', 'npm:4.0.11'],
+                                    ['postcss-merge-rules', 'npm:4.0.3'],
+                                    ['postcss-minify-font-values', 'npm:4.0.2'],
+                                    ['postcss-minify-gradients', 'npm:4.0.2'],
+                                    ['postcss-minify-params', 'npm:4.0.2'],
+                                    ['postcss-minify-selectors', 'npm:4.0.2'],
+                                    ['postcss-normalize-charset', 'npm:4.0.1'],
+                                    [
+                                        'postcss-normalize-display-values',
+                                        'npm:4.0.2',
+                                    ],
+                                    [
+                                        'postcss-normalize-positions',
+                                        'npm:4.0.2',
+                                    ],
+                                    [
+                                        'postcss-normalize-repeat-style',
+                                        'npm:4.0.2',
+                                    ],
+                                    ['postcss-normalize-string', 'npm:4.0.2'],
+                                    [
+                                        'postcss-normalize-timing-functions',
+                                        'npm:4.0.2',
+                                    ],
+                                    ['postcss-normalize-unicode', 'npm:4.0.1'],
+                                    ['postcss-normalize-url', 'npm:4.0.1'],
+                                    [
+                                        'postcss-normalize-whitespace',
+                                        'npm:4.0.2',
+                                    ],
+                                    ['postcss-ordered-values', 'npm:4.1.2'],
+                                    ['postcss-reduce-initial', 'npm:4.0.3'],
+                                    ['postcss-reduce-transforms', 'npm:4.0.2'],
+                                    ['postcss-svgo', 'npm:4.0.2'],
+                                    ['postcss-unique-selectors', 'npm:4.0.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'cssnano-preset-simple',
                     [
                         [
@@ -5493,6 +5733,71 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     ['cssnano-simple', 'npm:1.2.1'],
                                     ['cssnano-preset-simple', 'npm:1.2.1'],
                                     ['postcss', 'npm:7.0.35'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'cssnano-util-get-arguments',
+                    [
+                        [
+                            'npm:4.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/cssnano-util-get-arguments-npm-4.0.0-bcb28d23a7-4001786367.zip/node_modules/cssnano-util-get-arguments/',
+                                packageDependencies: [
+                                    ['cssnano-util-get-arguments', 'npm:4.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'cssnano-util-get-match',
+                    [
+                        [
+                            'npm:4.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/cssnano-util-get-match-npm-4.0.0-3d9b0fc2c4-1220816e19.zip/node_modules/cssnano-util-get-match/',
+                                packageDependencies: [
+                                    ['cssnano-util-get-match', 'npm:4.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'cssnano-util-raw-cache',
+                    [
+                        [
+                            'npm:4.0.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/cssnano-util-raw-cache-npm-4.0.1-dbb3751499-d3eb80e96f.zip/node_modules/cssnano-util-raw-cache/',
+                                packageDependencies: [
+                                    ['cssnano-util-raw-cache', 'npm:4.0.1'],
+                                    ['postcss', 'npm:7.0.35'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'cssnano-util-same-parent',
+                    [
+                        [
+                            'npm:4.0.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/cssnano-util-same-parent-npm-4.0.1-2a3442fd72-c01d567f9d.zip/node_modules/cssnano-util-same-parent/',
+                                packageDependencies: [
+                                    ['cssnano-util-same-parent', 'npm:4.0.1'],
                                 ],
                                 linkType: 'HARD',
                             },
@@ -6264,6 +6569,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'dot-prop',
+                    [
+                        [
+                            'npm:5.3.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/dot-prop-npm-5.3.0-7bf6ee1eb8-76e6693d88.zip/node_modules/dot-prop/',
+                                packageDependencies: [
+                                    ['dot-prop', 'npm:5.3.0'],
+                                    ['is-obj', 'npm:2.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'dotenv',
                     [
                         [
@@ -6353,6 +6675,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     './.yarn/cache/electron-to-chromium-npm-1.3.633-7d9467177b-986784f90d.zip/node_modules/electron-to-chromium/',
                                 packageDependencies: [
                                     ['electron-to-chromium', 'npm:1.3.633'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                        [
+                            'npm:1.3.641',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/electron-to-chromium-npm-1.3.641-aa8d6eb36a-d2b89bab4e.zip/node_modules/electron-to-chromium/',
+                                packageDependencies: [
+                                    ['electron-to-chromium', 'npm:1.3.641'],
                                 ],
                                 linkType: 'HARD',
                             },
@@ -8915,6 +9248,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'hex-color-regex',
+                    [
+                        [
+                            'npm:1.1.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/hex-color-regex-npm-1.1.0-35ec780c11-89899f5f74.zip/node_modules/hex-color-regex/',
+                                packageDependencies: [
+                                    ['hex-color-regex', 'npm:1.1.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'highlight.js',
                     [
                         [
@@ -8959,6 +9308,54 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     './.yarn/cache/hosted-git-info-npm-2.8.8-94a3928c03-3ecc389dc6.zip/node_modules/hosted-git-info/',
                                 packageDependencies: [
                                     ['hosted-git-info', 'npm:2.8.8'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'hsl-regex',
+                    [
+                        [
+                            'npm:1.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/hsl-regex-npm-1.0.0-49e975d55c-b04a50c6c7.zip/node_modules/hsl-regex/',
+                                packageDependencies: [
+                                    ['hsl-regex', 'npm:1.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'hsla-regex',
+                    [
+                        [
+                            'npm:1.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/hsla-regex-npm-1.0.0-f9d795def9-2460f935b5.zip/node_modules/hsla-regex/',
+                                packageDependencies: [
+                                    ['hsla-regex', 'npm:1.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'html-comment-regex',
+                    [
+                        [
+                            'npm:1.1.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/html-comment-regex-npm-1.1.2-3f748b74f9-f3bf135002.zip/node_modules/html-comment-regex/',
+                                packageDependencies: [
+                                    ['html-comment-regex', 'npm:1.1.2'],
                                 ],
                                 linkType: 'HARD',
                             },
@@ -9209,6 +9606,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     'import-fresh',
                     [
                         [
+                            'npm:2.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/import-fresh-npm-2.0.0-8b4e6073aa-c95204ecfb.zip/node_modules/import-fresh/',
+                                packageDependencies: [
+                                    ['import-fresh', 'npm:2.0.0'],
+                                    ['caller-path', 'npm:2.0.0'],
+                                    ['resolve-from', 'npm:3.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                        [
                             'npm:3.2.2',
                             {
                                 packageLocation:
@@ -9377,6 +9787,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'is-absolute-url',
+                    [
+                        [
+                            'npm:2.1.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/is-absolute-url-npm-2.1.0-f1cdafe3db-f9d193d86b.zip/node_modules/is-absolute-url/',
+                                packageDependencies: [
+                                    ['is-absolute-url', 'npm:2.1.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'is-accessor-descriptor',
                     [
                         [
@@ -9494,6 +9920,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'is-color-stop',
+                    [
+                        [
+                            'npm:1.1.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/is-color-stop-npm-1.1.0-4235280dc5-0e3d46b1e1.zip/node_modules/is-color-stop/',
+                                packageDependencies: [
+                                    ['is-color-stop', 'npm:1.1.0'],
+                                    ['css-color-names', 'npm:0.0.4'],
+                                    ['hex-color-regex', 'npm:1.1.0'],
+                                    ['hsl-regex', 'npm:1.0.0'],
+                                    ['hsla-regex', 'npm:1.0.0'],
+                                    ['rgb-regex', 'npm:1.0.1'],
+                                    ['rgba-regex', 'npm:1.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'is-core-module',
                     [
                         [
@@ -9582,6 +10030,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     ['is-accessor-descriptor', 'npm:1.0.0'],
                                     ['is-data-descriptor', 'npm:1.0.0'],
                                     ['kind-of', 'npm:6.0.3'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'is-directory',
+                    [
+                        [
+                            'npm:0.3.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/is-directory-npm-0.3.1-e835db28ed-e921dc1817.zip/node_modules/is-directory/',
+                                packageDependencies: [
+                                    ['is-directory', 'npm:0.3.1'],
                                 ],
                                 linkType: 'HARD',
                             },
@@ -9756,6 +10220,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                 linkType: 'HARD',
                             },
                         ],
+                        [
+                            'npm:2.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/is-obj-npm-2.0.0-3d95e053f4-ffa67ed5df.zip/node_modules/is-obj/',
+                                packageDependencies: [['is-obj', 'npm:2.0.0']],
+                                linkType: 'HARD',
+                            },
+                        ],
                     ],
                 ],
                 [
@@ -9809,6 +10282,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'is-resolvable',
+                    [
+                        [
+                            'npm:1.1.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/is-resolvable-npm-1.1.0-c03fa806bf-ef1a289c54.zip/node_modules/is-resolvable/',
+                                packageDependencies: [
+                                    ['is-resolvable', 'npm:1.1.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'is-stream',
                     [
                         [
@@ -9834,6 +10323,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     './.yarn/cache/is-string-npm-1.0.5-782e9359f5-c64c791eb7.zip/node_modules/is-string/',
                                 packageDependencies: [
                                     ['is-string', 'npm:1.0.5'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'is-svg',
+                    [
+                        [
+                            'npm:3.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/is-svg-npm-3.0.0-405580f5e7-7dd3f5f18d.zip/node_modules/is-svg/',
+                                packageDependencies: [
+                                    ['is-svg', 'npm:3.0.0'],
+                                    ['html-comment-regex', 'npm:1.1.2'],
                                 ],
                                 linkType: 'HARD',
                             },
@@ -10827,6 +11333,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'lodash.memoize',
+                    [
+                        [
+                            'npm:4.1.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/lodash.memoize-npm-4.1.2-0e6250041f-080c1095b7.zip/node_modules/lodash.memoize/',
+                                packageDependencies: [
+                                    ['lodash.memoize', 'npm:4.1.2'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'lodash.once',
                     [
                         [
@@ -10868,6 +11390,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     './.yarn/cache/lodash.toarray-npm-4.4.0-e7e700a242-f2b8de1812.zip/node_modules/lodash.toarray/',
                                 packageDependencies: [
                                     ['lodash.toarray', 'npm:4.4.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'lodash.uniq',
+                    [
+                        [
+                            'npm:4.5.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/lodash.uniq-npm-4.5.0-7c270dca85-47cb25b59b.zip/node_modules/lodash.uniq/',
+                                packageDependencies: [
+                                    ['lodash.uniq', 'npm:4.5.0'],
                                 ],
                                 linkType: 'HARD',
                             },
@@ -11951,6 +12489,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                         'virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:1.1.2',
                                     ],
                                     ['classnames', 'npm:2.2.6'],
+                                    ['cssnano', 'npm:4.1.10'],
                                     ['eslint', 'npm:7.16.0'],
                                     [
                                         'eslint-config-prettier',
@@ -12002,6 +12541,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     ],
                                     ['npm-run-all', 'npm:4.1.5'],
                                     ['postcss', 'npm:8.2.1'],
+                                    ['postcss-selector-parser', 'npm:6.0.4'],
                                     ['prettier', 'npm:2.2.1'],
                                     ['react', 'npm:17.0.1'],
                                     [
@@ -12226,6 +12766,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                 linkType: 'HARD',
                             },
                         ],
+                        [
+                            'npm:1.1.69',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/node-releases-npm-1.1.69-d492f441d9-240b2534f3.zip/node_modules/node-releases/',
+                                packageDependencies: [
+                                    ['node-releases', 'npm:1.1.69'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
                     ],
                 ],
                 [
@@ -12357,6 +12908,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     './.yarn/cache/normalize-range-npm-0.1.2-bec5e259e2-bca997d800.zip/node_modules/normalize-range/',
                                 packageDependencies: [
                                     ['normalize-range', 'npm:0.1.2'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'normalize-url',
+                    [
+                        [
+                            'npm:3.3.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/normalize-url-npm-3.3.0-f91cbdff7c-5704115f74.zip/node_modules/normalize-url/',
+                                packageDependencies: [
+                                    ['normalize-url', 'npm:3.3.0'],
                                 ],
                                 linkType: 'HARD',
                             },
@@ -13585,6 +14152,132 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'postcss-calc',
+                    [
+                        [
+                            'npm:7.0.5',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-calc-npm-7.0.5-bc3e3fecaf-850aed0201.zip/node_modules/postcss-calc/',
+                                packageDependencies: [
+                                    ['postcss-calc', 'npm:7.0.5'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-selector-parser', 'npm:6.0.4'],
+                                    ['postcss-value-parser', 'npm:4.1.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-colormin',
+                    [
+                        [
+                            'npm:4.0.3',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-colormin-npm-4.0.3-21265de8f1-c2632c38a6.zip/node_modules/postcss-colormin/',
+                                packageDependencies: [
+                                    ['postcss-colormin', 'npm:4.0.3'],
+                                    ['browserslist', 'npm:4.16.1'],
+                                    ['color', 'npm:3.1.3'],
+                                    ['has', 'npm:1.0.3'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-convert-values',
+                    [
+                        [
+                            'npm:4.0.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-convert-values-npm-4.0.1-64ae54995a-8fc4a78787.zip/node_modules/postcss-convert-values/',
+                                packageDependencies: [
+                                    ['postcss-convert-values', 'npm:4.0.1'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-discard-comments',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-discard-comments-npm-4.0.2-09a2a33168-7b357a3a4b.zip/node_modules/postcss-discard-comments/',
+                                packageDependencies: [
+                                    ['postcss-discard-comments', 'npm:4.0.2'],
+                                    ['postcss', 'npm:7.0.35'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-discard-duplicates',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-discard-duplicates-npm-4.0.2-075a69a9cf-128342e2b9.zip/node_modules/postcss-discard-duplicates/',
+                                packageDependencies: [
+                                    ['postcss-discard-duplicates', 'npm:4.0.2'],
+                                    ['postcss', 'npm:7.0.35'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-discard-empty',
+                    [
+                        [
+                            'npm:4.0.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-discard-empty-npm-4.0.1-59a5c13419-f06a00331c.zip/node_modules/postcss-discard-empty/',
+                                packageDependencies: [
+                                    ['postcss-discard-empty', 'npm:4.0.1'],
+                                    ['postcss', 'npm:7.0.35'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-discard-overridden',
+                    [
+                        [
+                            'npm:4.0.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-discard-overridden-npm-4.0.1-c88fad5093-be24bca265.zip/node_modules/postcss-discard-overridden/',
+                                packageDependencies: [
+                                    ['postcss-discard-overridden', 'npm:4.0.1'],
+                                    ['postcss', 'npm:7.0.35'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'postcss-functions',
                     [
                         [
@@ -13616,6 +14309,128 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     ['postcss-js', 'npm:3.0.3'],
                                     ['camelcase-css', 'npm:2.0.1'],
                                     ['postcss', 'npm:8.1.7'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-merge-longhand',
+                    [
+                        [
+                            'npm:4.0.11',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-merge-longhand-npm-4.0.11-a4de769005-f6ae3d8f2b.zip/node_modules/postcss-merge-longhand/',
+                                packageDependencies: [
+                                    ['postcss-merge-longhand', 'npm:4.0.11'],
+                                    ['css-color-names', 'npm:0.0.4'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                    ['stylehacks', 'npm:4.0.3'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-merge-rules',
+                    [
+                        [
+                            'npm:4.0.3',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-merge-rules-npm-4.0.3-73bf0c183e-1890781711.zip/node_modules/postcss-merge-rules/',
+                                packageDependencies: [
+                                    ['postcss-merge-rules', 'npm:4.0.3'],
+                                    ['browserslist', 'npm:4.16.1'],
+                                    ['caniuse-api', 'npm:3.0.0'],
+                                    ['cssnano-util-same-parent', 'npm:4.0.1'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-selector-parser', 'npm:3.1.2'],
+                                    ['vendors', 'npm:1.0.4'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-minify-font-values',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-minify-font-values-npm-4.0.2-e8107d3a7f-9fc541821f.zip/node_modules/postcss-minify-font-values/',
+                                packageDependencies: [
+                                    ['postcss-minify-font-values', 'npm:4.0.2'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-minify-gradients',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-minify-gradients-npm-4.0.2-d5647bcf0b-4c54f4fa49.zip/node_modules/postcss-minify-gradients/',
+                                packageDependencies: [
+                                    ['postcss-minify-gradients', 'npm:4.0.2'],
+                                    ['cssnano-util-get-arguments', 'npm:4.0.0'],
+                                    ['is-color-stop', 'npm:1.1.0'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-minify-params',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-minify-params-npm-4.0.2-c449dd1044-dbcb82b7b1.zip/node_modules/postcss-minify-params/',
+                                packageDependencies: [
+                                    ['postcss-minify-params', 'npm:4.0.2'],
+                                    ['alphanum-sort', 'npm:1.0.2'],
+                                    ['browserslist', 'npm:4.16.1'],
+                                    ['cssnano-util-get-arguments', 'npm:4.0.0'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                    ['uniqs', 'npm:2.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-minify-selectors',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-minify-selectors-npm-4.0.2-16f6851911-8fde92b556.zip/node_modules/postcss-minify-selectors/',
+                                packageDependencies: [
+                                    ['postcss-minify-selectors', 'npm:4.0.2'],
+                                    ['alphanum-sort', 'npm:1.0.2'],
+                                    ['has', 'npm:1.0.3'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-selector-parser', 'npm:3.1.2'],
                                 ],
                                 linkType: 'HARD',
                             },
@@ -13736,6 +14551,251 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'postcss-normalize-charset',
+                    [
+                        [
+                            'npm:4.0.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-normalize-charset-npm-4.0.1-c29816bace-4e40b321c4.zip/node_modules/postcss-normalize-charset/',
+                                packageDependencies: [
+                                    ['postcss-normalize-charset', 'npm:4.0.1'],
+                                    ['postcss', 'npm:7.0.35'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-normalize-display-values',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-normalize-display-values-npm-4.0.2-c0f29897ad-4bd5952f1c.zip/node_modules/postcss-normalize-display-values/',
+                                packageDependencies: [
+                                    [
+                                        'postcss-normalize-display-values',
+                                        'npm:4.0.2',
+                                    ],
+                                    ['cssnano-util-get-match', 'npm:4.0.0'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-normalize-positions',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-normalize-positions-npm-4.0.2-eb62f7b2e3-9d7d79703a.zip/node_modules/postcss-normalize-positions/',
+                                packageDependencies: [
+                                    [
+                                        'postcss-normalize-positions',
+                                        'npm:4.0.2',
+                                    ],
+                                    ['cssnano-util-get-arguments', 'npm:4.0.0'],
+                                    ['has', 'npm:1.0.3'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-normalize-repeat-style',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-normalize-repeat-style-npm-4.0.2-b67bc11e2b-dcb89339fd.zip/node_modules/postcss-normalize-repeat-style/',
+                                packageDependencies: [
+                                    [
+                                        'postcss-normalize-repeat-style',
+                                        'npm:4.0.2',
+                                    ],
+                                    ['cssnano-util-get-arguments', 'npm:4.0.0'],
+                                    ['cssnano-util-get-match', 'npm:4.0.0'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-normalize-string',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-normalize-string-npm-4.0.2-2fedcfab29-91116aa9c6.zip/node_modules/postcss-normalize-string/',
+                                packageDependencies: [
+                                    ['postcss-normalize-string', 'npm:4.0.2'],
+                                    ['has', 'npm:1.0.3'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-normalize-timing-functions',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-normalize-timing-functions-npm-4.0.2-d0675e54df-92bca529aa.zip/node_modules/postcss-normalize-timing-functions/',
+                                packageDependencies: [
+                                    [
+                                        'postcss-normalize-timing-functions',
+                                        'npm:4.0.2',
+                                    ],
+                                    ['cssnano-util-get-match', 'npm:4.0.0'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-normalize-unicode',
+                    [
+                        [
+                            'npm:4.0.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-normalize-unicode-npm-4.0.1-9cc5bfcb9d-84714ba7c1.zip/node_modules/postcss-normalize-unicode/',
+                                packageDependencies: [
+                                    ['postcss-normalize-unicode', 'npm:4.0.1'],
+                                    ['browserslist', 'npm:4.16.1'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-normalize-url',
+                    [
+                        [
+                            'npm:4.0.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-normalize-url-npm-4.0.1-2626c4ca1a-76d75e27e9.zip/node_modules/postcss-normalize-url/',
+                                packageDependencies: [
+                                    ['postcss-normalize-url', 'npm:4.0.1'],
+                                    ['is-absolute-url', 'npm:2.1.0'],
+                                    ['normalize-url', 'npm:3.3.0'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-normalize-whitespace',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-normalize-whitespace-npm-4.0.2-6339383b96-7093ca8313.zip/node_modules/postcss-normalize-whitespace/',
+                                packageDependencies: [
+                                    [
+                                        'postcss-normalize-whitespace',
+                                        'npm:4.0.2',
+                                    ],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-ordered-values',
+                    [
+                        [
+                            'npm:4.1.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-ordered-values-npm-4.1.2-7eac60699d-6f39464145.zip/node_modules/postcss-ordered-values/',
+                                packageDependencies: [
+                                    ['postcss-ordered-values', 'npm:4.1.2'],
+                                    ['cssnano-util-get-arguments', 'npm:4.0.0'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-reduce-initial',
+                    [
+                        [
+                            'npm:4.0.3',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-reduce-initial-npm-4.0.3-01cc02f1f4-ed276a8208.zip/node_modules/postcss-reduce-initial/',
+                                packageDependencies: [
+                                    ['postcss-reduce-initial', 'npm:4.0.3'],
+                                    ['browserslist', 'npm:4.16.1'],
+                                    ['caniuse-api', 'npm:3.0.0'],
+                                    ['has', 'npm:1.0.3'],
+                                    ['postcss', 'npm:7.0.35'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-reduce-transforms',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-reduce-transforms-npm-4.0.2-129de8fec9-2bf993ff44.zip/node_modules/postcss-reduce-transforms/',
+                                packageDependencies: [
+                                    ['postcss-reduce-transforms', 'npm:4.0.2'],
+                                    ['cssnano-util-get-match', 'npm:4.0.0'],
+                                    ['has', 'npm:1.0.3'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'postcss-safe-parser',
                     [
                         [
@@ -13756,6 +14816,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     'postcss-selector-parser',
                     [
                         [
+                            'npm:3.1.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-selector-parser-npm-3.1.2-33bf16ea9d-021ffdeef1.zip/node_modules/postcss-selector-parser/',
+                                packageDependencies: [
+                                    ['postcss-selector-parser', 'npm:3.1.2'],
+                                    ['dot-prop', 'npm:5.3.0'],
+                                    ['indexes-of', 'npm:1.0.1'],
+                                    ['uniq', 'npm:1.0.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                        [
                             'npm:6.0.4',
                             {
                                 packageLocation:
@@ -13766,6 +14840,45 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     ['indexes-of', 'npm:1.0.1'],
                                     ['uniq', 'npm:1.0.1'],
                                     ['util-deprecate', 'npm:1.0.2'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-svgo',
+                    [
+                        [
+                            'npm:4.0.2',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-svgo-npm-4.0.2-5585d65908-a2a6e324fc.zip/node_modules/postcss-svgo/',
+                                packageDependencies: [
+                                    ['postcss-svgo', 'npm:4.0.2'],
+                                    ['is-svg', 'npm:3.0.0'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-value-parser', 'npm:3.3.1'],
+                                    ['svgo', 'npm:1.3.2'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'postcss-unique-selectors',
+                    [
+                        [
+                            'npm:4.0.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/postcss-unique-selectors-npm-4.0.1-dde8d7eda6-1f1fdc1086.zip/node_modules/postcss-unique-selectors/',
+                                packageDependencies: [
+                                    ['postcss-unique-selectors', 'npm:4.0.1'],
+                                    ['alphanum-sort', 'npm:1.0.2'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['uniqs', 'npm:2.0.0'],
                                 ],
                                 linkType: 'HARD',
                             },
@@ -15064,6 +16177,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                             },
                         ],
                         [
+                            'npm:3.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/resolve-from-npm-3.0.0-0bff35697e-dc0c83b3b8.zip/node_modules/resolve-from/',
+                                packageDependencies: [
+                                    ['resolve-from', 'npm:3.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                        [
                             'npm:4.0.0',
                             {
                                 packageLocation:
@@ -15192,6 +16316,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     './.yarn/cache/rework-visit-npm-1.0.0-0be9a8d45e-ff782e79aa.zip/node_modules/rework-visit/',
                                 packageDependencies: [
                                     ['rework-visit', 'npm:1.0.0'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'rgb-regex',
+                    [
+                        [
+                            'npm:1.0.1',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/rgb-regex-npm-1.0.1-c867413fad-7701e22ec4.zip/node_modules/rgb-regex/',
+                                packageDependencies: [
+                                    ['rgb-regex', 'npm:1.0.1'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'rgba-regex',
+                    [
+                        [
+                            'npm:1.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/rgba-regex-npm-1.0.0-7fe6ce6060-4ffb946276.zip/node_modules/rgba-regex/',
+                                packageDependencies: [
+                                    ['rgba-regex', 'npm:1.0.0'],
                                 ],
                                 linkType: 'HARD',
                             },
@@ -16797,6 +17953,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'stylehacks',
+                    [
+                        [
+                            'npm:4.0.3',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/stylehacks-npm-4.0.3-b704c3a5ab-1345ad348d.zip/node_modules/stylehacks/',
+                                packageDependencies: [
+                                    ['stylehacks', 'npm:4.0.3'],
+                                    ['browserslist', 'npm:4.16.1'],
+                                    ['postcss', 'npm:7.0.35'],
+                                    ['postcss-selector-parser', 'npm:3.1.2'],
+                                ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'stylis',
                     [
                         [
@@ -17371,6 +18546,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'timsort',
+                    [
+                        [
+                            'npm:0.3.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/timsort-npm-0.3.0-868a28166c-d8300c3ecf.zip/node_modules/timsort/',
+                                packageDependencies: [['timsort', 'npm:0.3.0']],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'to-arraybuffer',
                     [
                         [
@@ -17893,6 +19082,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                     ],
                 ],
                 [
+                    'uniqs',
+                    [
+                        [
+                            'npm:2.0.0',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/uniqs-npm-2.0.0-f8efe64815-f6467e9cb9.zip/node_modules/uniqs/',
+                                packageDependencies: [['uniqs', 'npm:2.0.0']],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
                     'unique-filename',
                     [
                         [
@@ -18315,6 +19518,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
                                     ['spdx-correct', 'npm:3.1.1'],
                                     ['spdx-expression-parse', 'npm:3.0.1'],
                                 ],
+                                linkType: 'HARD',
+                            },
+                        ],
+                    ],
+                ],
+                [
+                    'vendors',
+                    [
+                        [
+                            'npm:1.0.4',
+                            {
+                                packageLocation:
+                                    './.yarn/cache/vendors-npm-1.0.4-d3a9d2c62c-f49cf918e8.zip/node_modules/vendors/',
+                                packageDependencies: [['vendors', 'npm:1.0.4']],
                                 linkType: 'HARD',
                             },
                         ],

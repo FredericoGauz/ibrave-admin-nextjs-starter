@@ -1,11 +1,10 @@
 const colors = require('tailwindcss/colors');
 const { fontFamily } = require('tailwindcss/defaultTheme');
-
-module.exports = {
+const windmill = require('@windmill/react-ui/config');
+module.exports = windmill({
     purge: {
         content: ['./src/**/*.{js,ts,jsx,tsx}'],
     },
-    darkMode: false,
     theme: {
         fontFamily: {
             sans: ['Inter', ...fontFamily.sans],
@@ -13,6 +12,10 @@ module.exports = {
         extend: {
             colors: {
                 violet: colors.violet,
+            },
+            boxShadow: {
+                bottom:
+                    '0 5px 6px -7px rgba(0, 0, 0, 0.6), 0 2px 4px -5px rgba(0, 0, 0, 0.06)',
             },
         },
     },
@@ -22,7 +25,7 @@ module.exports = {
         require('@tailwindcss/typography'),
         require('@tailwindcss/aspect-ratio'),
     ],
-};
+});
 
 /**
  * === Already Included Colors ===
