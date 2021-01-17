@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ChartLegend({ legends }) {
+export function ChartLegend({ legends }: { legends: any[] }) {
     return (
         <div className="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
             {legends.map((legend) => (
@@ -14,5 +14,3 @@ function ChartLegend({ legends }) {
         </div>
     );
 }
-
-export default ChartLegend;

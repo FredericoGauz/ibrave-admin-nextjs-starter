@@ -1,11 +1,13 @@
 import { useSession } from 'next-auth/client';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
+import { PageTitle } from 'src/components/Typography/PageTitle';
 // import { CTA } from '../components/CTA';
-export default function Home() {
+export default function DashBoard() {
     const [session] = useSession();
     return (
         <main>
             {/* <CTA /> */}
+            <PageTitle>DashBoard</PageTitle>
             <div className="p-10">
                 {session && (
                     <p>
@@ -27,7 +29,7 @@ function HomeLayout({ children }: { children: ReactNode }) {
     );
 }
 
-Home.layoutProps = {
+DashBoard.layoutProps = {
     meta: {
         title: 'Home',
     },

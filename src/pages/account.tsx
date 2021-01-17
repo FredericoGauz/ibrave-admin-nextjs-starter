@@ -1,9 +1,10 @@
 import React from 'react';
+import { PageTitle } from 'src/components/Typography/PageTitle';
 
 export const AccountPage = () => {
     return (
         <div>
-            <h1>Account Page</h1>
+            <PageTitle>Account</PageTitle>
         </div>
     );
 };
