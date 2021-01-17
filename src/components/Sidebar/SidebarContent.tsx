@@ -16,7 +16,10 @@ export interface WindmillRoute {
     path: string;
     routes: WindmillRoute[];
 }
-const routes = [{ name: 'Account', path: '/account', icon: 'PeopleIcon' }];
+const routes = [
+    { name: 'Locations', path: '/locations', icon: 'FormsIcon' },
+    { name: 'Account', path: '/account', icon: 'PeopleIcon' },
+];
 
 function SidebarContent() {
     return (
