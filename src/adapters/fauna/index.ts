@@ -4,10 +4,10 @@
  * https://github.com/nextauthjs/next-auth/pull/1134
  */
 
-import { query as q } from 'faunadb';
+import { Expr, ExprVal, ExprArg, query as q } from 'faunadb';
 import { createHash, randomBytes } from 'crypto';
 
-const Adapter = (config, options = {}) => {
+const Adapter = (config: any, options = {}) => {
     const {
         faunaClient,
         collections = {
@@ -24,8 +24,8 @@ const Adapter = (config, options = {}) => {
         },
     } = config;
 
-    async function getAdapter(appOptions) {
-        function _debug(debugCode, ...args) {
+    async function getAdapter(appOptions: { session?: any; baseUrl?: any }) {
+        function _debug(debugCode: string, ...args: any[]) {
             // console.info(`fauna_${debugCode}`, ...args)
         }
 
@@ -39,7 +39,12 @@ const Adapter = (config, options = {}) => {
                 ? appOptions.session.updateAge * 1000
                 : 0;
 
-        async function createUser(profile) {
+        async function createUser(profile: {
+            name: any;
+            email: any;
+            image: any;
+            emailVerified: any;
+        }) {
             _debug('createUser', profile);
 
             const timestamp = new Date().toISOString();
@@ -67,7 +72,16 @@ const Adapter = (config, options = {}) => {
             }
         }
 
-        async function getUser(id) {
+        async function getUser(
+            id:
+                | string
+                | number
+                | boolean
+                | Expr
+                | { [key: string]: any }
+                | ExprVal[]
+                | undefined
+        ) {
             _debug('getUser', id);
 
             const FQL = q.Get(q.Ref(q.Collection(collections.User), id));
@@ -83,7 +97,7 @@ const Adapter = (config, options = {}) => {
             }
         }
 
-        async function getUserByEmail(email) {
+        async function getUserByEmail(email: ExprArg) {
             _debug('getUserByEmail', email);
 
             if (!email) {
@@ -113,8 +127,8 @@ const Adapter = (config, options = {}) => {
         }
 
         async function getUserByProviderAccountId(
-            providerId,
-            providerAccountId
+            providerId: any,
+            providerAccountId: any
         ) {
             _debug('getUserByProviderAccountId', providerId, providerAccountId);
 
@@ -155,7 +169,20 @@ const Adapter = (config, options = {}) => {
             }
         }
 
-        async function updateUser(user) {
+        async function updateUser(user: {
+            id:
+                | string
+                | number
+                | boolean
+                | Expr
+                | { [key: string]: any }
+                | ExprVal[]
+                | undefined;
+            name: any;
+            email: any;
+            image: any;
+            emailVerified: any;
+        }) {
             _debug('updateUser', user);
 
             const timestamp = new Date().toISOString();
@@ -185,7 +212,16 @@ const Adapter = (config, options = {}) => {
             }
         }
 
-        async function deleteUser(userId) {
+        async function deleteUser(
+            userId:
+                | string
+                | number
+                | boolean
+                | Expr
+                | { [key: string]: any }
+                | ExprVal[]
+                | undefined
+        ) {
             _debug('deleteUser', userId);
 
             const FQL = q.Delete(q.Ref(q.Collection(collections.User), userId));
@@ -199,13 +235,13 @@ const Adapter = (config, options = {}) => {
         }
 
         async function linkAccount(
-            userId,
-            providerId,
-            providerType,
-            providerAccountId,
-            refreshToken,
-            accessToken,
-            accessTokenExpires
+            userId: any,
+            providerId: any,
+            providerType: any,
+            providerAccountId: any,
+            refreshToken: any,
+            accessToken: any,
+            accessTokenExpires: any
         ) {
             _debug(
                 'linkAccount',
@@ -243,7 +279,11 @@ const Adapter = (config, options = {}) => {
             }
         }
 
-        async function unlinkAccount(userId, providerId, providerAccountId) {
+        async function unlinkAccount(
+            userId: any,
+            providerId: any,
+            providerAccountId: any
+        ) {
             _debug('unlinkAccount', userId, providerId, providerAccountId);
 
             const FQL = q.Delete(
@@ -266,7 +306,7 @@ const Adapter = (config, options = {}) => {
             }
         }
 
-        async function createSession(user) {
+        async function createSession(user: { id: any }) {
             _debug('createSession', user);
 
             let expires = null;
@@ -280,7 +320,7 @@ const Adapter = (config, options = {}) => {
             const FQL = q.Create(q.Collection(collections.Session), {
                 data: {
                     userId: user.id,
-                    expires: q.Time(expires),
+                    expires: q.Time(expires || ''),
                     sessionToken: randomBytes(32).toString('hex'),
                     accessToken: randomBytes(32).toString('hex'),
                     createdAt: q.Time(timestamp),
@@ -300,7 +340,7 @@ const Adapter = (config, options = {}) => {
             }
         }
 
-        async function getSession(sessionToken) {
+        async function getSession(sessionToken: ExprArg) {
             _debug('getSession', sessionToken);
 
             try {
@@ -344,7 +384,20 @@ const Adapter = (config, options = {}) => {
             }
         }
 
-        async function updateSession(session, force) {
+        async function updateSession(
+            session: {
+                expires: string | number | Date;
+                id:
+                    | string
+                    | number
+                    | boolean
+                    | Expr
+                    | { [key: string]: any }
+                    | ExprVal[]
+                    | undefined;
+            },
+            force: any
+        ) {
             _debug('updateSession', session);
 
             try {
@@ -401,7 +454,7 @@ const Adapter = (config, options = {}) => {
             }
         }
 
-        async function _deleteSession(sessionToken) {
+        async function _deleteSession(sessionToken: ExprArg) {
             const FQL = q.Delete(
                 q.Select(
                     'ref',
@@ -412,7 +465,7 @@ const Adapter = (config, options = {}) => {
             return faunaClient.query(FQL);
         }
 
-        async function deleteSession(sessionToken) {
+        async function deleteSession(sessionToken: any) {
             _debug('deleteSession', sessionToken);
 
             try {
@@ -424,11 +477,11 @@ const Adapter = (config, options = {}) => {
         }
 
         async function createVerificationRequest(
-            identifier,
-            url,
-            token,
-            secret,
-            provider
+            identifier: any,
+            url: any,
+            token: any,
+            secret: any,
+            provider: { sendVerificationRequest: any; maxAge: any }
         ) {
             _debug('createVerificationRequest', identifier);
 
@@ -487,10 +540,10 @@ const Adapter = (config, options = {}) => {
         }
 
         async function getVerificationRequest(
-            identifier,
-            token,
-            secret,
-            provider
+            identifier: any,
+            token: any,
+            secret: any,
+            provider: any
         ) {
             _debug('getVerificationRequest', identifier, token);
 
@@ -542,10 +595,10 @@ const Adapter = (config, options = {}) => {
         }
 
         async function deleteVerificationRequest(
-            identifier,
-            token,
-            secret,
-            provider
+            identifier: any,
+            token: any,
+            secret: any,
+            provider: any
         ) {
             _debug('deleteVerification', identifier, token);
 
@@ -598,6 +651,7 @@ const Adapter = (config, options = {}) => {
     };
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     Adapter,
 };
