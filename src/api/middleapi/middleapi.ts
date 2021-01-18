@@ -38,7 +38,7 @@ export const getLocations = async (filters?: string): Promise<ILocation[]> => {
 };
 
 export const getLocationByUid = async (uid: string): Promise<ILocation> => {
-    let result: AxiosResponse = await Axios.get(
+    const result: AxiosResponse = await Axios.get(
         `${baseUrl}/locations?uid=${uid}`,
         {
             headers: {
@@ -47,14 +47,18 @@ export const getLocationByUid = async (uid: string): Promise<ILocation> => {
         }
     );
     return new Promise(async (resolve: any, rejection: any) => {
-        if (!result) rejection('Error getting result');
+        if (!result) return rejection('Error getting result');
         const strapiLocation: IStrapiLocation[] = result.data;
-        if (!strapiLocation) rejection('Error getting result from json');
-        if (!strapiLocation[0]) rejection('No results.');
+        if (!strapiLocation) return rejection('Error getting result from json');
+        if (strapiLocation[0] === undefined) return rejection('No results.');
         const location = convertRawLocationToLocation(strapiLocation[0]);
-        if (location) resolve(location);
+        if (location) return resolve(location);
         else {
-            rejection('Invalid location information', strapiLocation, location);
+            return rejection(
+                'Invalid location information',
+                strapiLocation,
+                location
+            );
         }
     });
 };

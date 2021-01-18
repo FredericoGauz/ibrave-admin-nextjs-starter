@@ -43,6 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tailwindcss/forms", "npm:0.2.1"],
             ["@tailwindcss/typography", "virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:0.3.1"],
             ["@types/classnames", "npm:2.2.11"],
+            ["@types/lodash", "npm:4.14.167"],
             ["@types/next-auth", "npm:3.1.21"],
             ["@types/node", "npm:14.14.21"],
             ["@types/react", "npm:17.0.0"],
@@ -67,6 +68,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:4.2.0"],
             ["faunadb", "npm:4.0.0"],
             ["husky", "npm:5.0.6"],
+            ["immer", "npm:8.0.0"],
             ["lint-staged", "npm:10.5.3"],
             ["lodash", "npm:4.17.20"],
             ["next", "virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:10.0.5"],
@@ -699,6 +701,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-json5-npm-0.0.29-f63a7916bd-66e9ac0143.zip/node_modules/@types/json5/",
           "packageDependencies": [
             ["@types/json5", "npm:0.0.29"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/lodash", [
+        ["npm:4.14.167", {
+          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.167-275fff817a-40778f83a8.zip/node_modules/@types/lodash/",
+          "packageDependencies": [
+            ["@types/lodash", "npm:4.14.167"]
           ],
           "linkType": "HARD",
         }]
@@ -5781,6 +5792,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["immer", [
+        ["npm:8.0.0", {
+          "packageLocation": "./.yarn/cache/immer-npm-8.0.0-d9791e8606-99ef306c81.zip/node_modules/immer/",
+          "packageDependencies": [
+            ["immer", "npm:8.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["import-fresh", [
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/import-fresh-npm-2.0.0-8b4e6073aa-c95204ecfb.zip/node_modules/import-fresh/",
@@ -7536,6 +7556,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tailwindcss/forms", "npm:0.2.1"],
             ["@tailwindcss/typography", "virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:0.3.1"],
             ["@types/classnames", "npm:2.2.11"],
+            ["@types/lodash", "npm:4.14.167"],
             ["@types/next-auth", "npm:3.1.21"],
             ["@types/node", "npm:14.14.21"],
             ["@types/react", "npm:17.0.0"],
@@ -7560,6 +7581,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:4.2.0"],
             ["faunadb", "npm:4.0.0"],
             ["husky", "npm:5.0.6"],
+            ["immer", "npm:8.0.0"],
             ["lint-staged", "npm:10.5.3"],
             ["lodash", "npm:4.17.20"],
             ["next", "virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:10.0.5"],

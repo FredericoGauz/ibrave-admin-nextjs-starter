@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import response from '../utils/demo/tableData';
 import Image from 'next/image';
 import Link from 'next/link';
+import _ from 'lodash';
 
 import {
     Table,
@@ -48,7 +49,7 @@ export const TableWithActions = ({
                         {tableTitles.map((s) => (
                             <TableCell>{s}</TableCell>
                         ))}
-                        <TableCell>Actions</TableCell>
+                        {actions && <TableCell>Actions</TableCell>}
                     </tr>
                 </TableHeader>
                 <TableBody>
@@ -75,10 +76,12 @@ export const TableCellWithNameDescriptionAndImage = ({
     name,
     description,
     image,
+    link,
 }: {
     name: string;
     description: string;
     image: string;
+    link?: string;
 }) => {
     return (
         <TableCell>
@@ -95,9 +98,11 @@ export const TableCellWithNameDescriptionAndImage = ({
                     )}
                 </div>
                 <div>
-                    <p className="mb-1 text-lg font-semibold dark:text-gray-300">
-                        {name}
-                    </p>
+                    <Link href={link || '#'}>
+                        <a className="mb-1 text-lg font-semibold dark:text-gray-300">
+                            {name}
+                        </a>
+                    </Link>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
                         {description}
                     </p>
@@ -114,17 +119,23 @@ export const TableCellWithText = ({ text }: { text: string }) => {
         </TableCell>
     );
 };
-
-export const TableCellWithBadge = ({
-    text,
-    status,
-}: {
+export interface IBadge {
     text: string;
     status?: 'primary' | 'success' | 'danger' | 'warning' | 'neutral';
-}) => {
+}
+export const TableCellWithBadge = ({ badge }: { badge: IBadge | IBadge[] }) => {
+    const badges = Array.isArray(badge) ? badge : [badge];
+    const badgesToRender = _.take(badges, 2);
     return (
         <TableCell>
-            <Badge type={status || 'primary'}>{text}</Badge>
+            {badgesToRender.map((b) => (
+                <Badge type={b.status || 'primary'}>{b.text}</Badge>
+            ))}
+            {badges.length > 2 && (
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                    +{badges.length}
+                </span>
+            )}
         </TableCell>
     );
 };

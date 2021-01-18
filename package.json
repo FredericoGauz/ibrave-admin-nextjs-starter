@@ -4,6 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
+        "debug": "NODE_OPTIONS='--inspect' next dev",
         "build": "next build",
         "start": "next start",
         "lint": "eslint --fix --ext .js,.ts,.tsx --ignore-path .gitignore .",
@@ -21,6 +22,7 @@
         "axios": "^0.21.1",
         "classnames": "2.2.6",
         "faunadb": "4.0.0",
+        "immer": "^8.0.0",
         "lodash": "^4.17.20",
         "next": "^10.0.5",
         "next-auth": "^3.1.0",
@@ -35,6 +37,7 @@
         "@tailwindcss/forms": "0.2.1",
         "@tailwindcss/typography": "0.3.1",
         "@types/classnames": "2.2.11",
+        "@types/lodash": "^4.14.167",
         "@types/next-auth": "^3.1.21",
         "@types/node": "^14.14.21",
         "@types/react": "^17.0.0",

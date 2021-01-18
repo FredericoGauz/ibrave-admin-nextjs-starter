@@ -492,6 +492,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash@npm:^4.14.167":
+  version: 4.14.167
+  resolution: "@types/lodash@npm:4.14.167"
+  checksum: 40778f83a86392625b3d52c15f59171a0f6a35436128b8fb1e37f89162f7950dc98570f27bc99ce1e2e04084e64da41cb45146d091d5181e12c6733bcf16fac6
+  languageName: node
+  linkType: hard
+
 "@types/next-auth@npm:^3.1.21":
   version: 3.1.21
   resolution: "@types/next-auth@npm:3.1.21"
@@ -4807,6 +4814,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"immer@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "immer@npm:8.0.0"
+  checksum: 99ef306c811902c31554ef2d5c22b8e59c2047761bf307c28559f6ec74b0ff8dfaa934c29d6704f1087514ff9e278c782731a1c21e8171d568a1124f57f7b192
+  languageName: node
+  linkType: hard
+
 "import-fresh@npm:^2.0.0":
   version: 2.0.0
   resolution: "import-fresh@npm:2.0.0"
@@ -6295,6 +6309,7 @@ fsevents@~2.1.2:
     "@tailwindcss/forms": 0.2.1
     "@tailwindcss/typography": 0.3.1
     "@types/classnames": 2.2.11
+    "@types/lodash": ^4.14.167
     "@types/next-auth": ^3.1.21
     "@types/node": ^14.14.21
     "@types/react": ^17.0.0
@@ -6319,6 +6334,7 @@ fsevents@~2.1.2:
     eslint-plugin-react-hooks: 4.2.0
     faunadb: 4.0.0
     husky: next
+    immer: ^8.0.0
     lint-staged: ">=10.5.3"
     lodash: ^4.17.20
     next: ^10.0.5
