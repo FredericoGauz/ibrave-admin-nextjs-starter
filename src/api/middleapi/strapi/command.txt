@@ -1,0 +1,4 @@
+(without config)
+sts ./api -o ./custom-types -g components/
+(with config)
+sts -c ./stsconfig.js
