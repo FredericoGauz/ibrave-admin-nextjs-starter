@@ -105,14 +105,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["@ampproject/toolbox-optimizer", [
         ["npm:2.7.1-alpha.0", {
-          "packageLocation": "./.yarn/cache/@ampproject-toolbox-optimizer-npm-2.7.1-alpha.0-3cbce502bd-b82887a0b7.zip/node_modules/@ampproject/toolbox-optimizer/",
+          "packageLocation": "./.yarn/unplugged/@ampproject-toolbox-optimizer-virtual-b5f0f40ece/node_modules/@ampproject/toolbox-optimizer/",
           "packageDependencies": [
             ["@ampproject/toolbox-optimizer", "npm:2.7.1-alpha.0"]
           ],
           "linkType": "SOFT",
         }],
         ["virtual:39b940d328fd4884208ad219cae69a00c80a851fc0b480f82f8a2fa8eb5619ac17d07cc67823d264b636e4905747d82eecc24b2d21207a3f9a2b8f8b05220767#npm:2.7.1-alpha.0", {
-          "packageLocation": "./.yarn/$$virtual/@ampproject-toolbox-optimizer-virtual-b5f0f40ece/0/cache/@ampproject-toolbox-optimizer-npm-2.7.1-alpha.0-3cbce502bd-b82887a0b7.zip/node_modules/@ampproject/toolbox-optimizer/",
+          "packageLocation": "./.yarn/unplugged/@ampproject-toolbox-optimizer-virtual-b5f0f40ece/node_modules/@ampproject/toolbox-optimizer/",
           "packageDependencies": [
             ["@ampproject/toolbox-optimizer", "virtual:39b940d328fd4884208ad219cae69a00c80a851fc0b480f82f8a2fa8eb5619ac17d07cc67823d264b636e4905747d82eecc24b2d21207a3f9a2b8f8b05220767#npm:2.7.1-alpha.0"],
             ["@ampproject/toolbox-core", "npm:2.7.4"],
@@ -3185,7 +3185,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.7.0", {
-          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.7.0-213dcef0c2-7fdff8bda2.zip/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.7.0-213dcef0c2/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.7.0"]
           ],
@@ -5846,7 +5846,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["highlight.js", [
         ["npm:9.18.5", {
-          "packageLocation": "./.yarn/cache/highlight.js-npm-9.18.5-571500f48d-dea74c216c.zip/node_modules/highlight.js/",
+          "packageLocation": "./.yarn/unplugged/highlight.js-npm-9.18.5-571500f48d/node_modules/highlight.js/",
           "packageDependencies": [
             ["highlight.js", "npm:9.18.5"]
           ],
