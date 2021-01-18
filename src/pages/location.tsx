@@ -7,7 +7,8 @@ import Link from 'next/link';
 import { SRLWrapper } from 'simple-react-lightbox';
 import Image from 'next/image';
 import parse from 'html-react-parser';
-import { MoonIcon } from '../icons';
+import { SunIcon } from '../icons';
+import { LocationMap } from '../components/googlemaps/display-map';
 export const LocationPage = () => {
     const router = useRouter();
     const id =
@@ -18,7 +19,7 @@ export const LocationPage = () => {
     const { isLoading, isError, data } = useQuery(
         ['location', id],
         async () => {
-            if (!id) throw new Error('Missing Id.');
+            if (!id) return console.log('Missing Id.');
             return await getLocationByUid(id);
         }
     );
@@ -30,7 +31,7 @@ export const LocationPage = () => {
     return (
         <div className="max-w-screen-xl mx-auto">
             <small className="float-right text-indigo-600">
-                <Link href={`/create-location?uid=${concept.uid}`}>
+                <Link href={`/edit?uid=${concept.uid}`}>
                     <a>edit</a>
                 </Link>
             </small>
@@ -59,21 +60,16 @@ export const LocationPage = () => {
                         </h2>
                         <div className="mt-4">
                             {concept.tags.length > 0 &&
-                                concept.tags
-                                    .sort(() => 0.5 - Math.random())
-                                    .slice(0, 5)
-                                    .map((tag) => (
-                                        <Link
-                                            key={tag.uid}
-                                            href={`/tag?uid=${tag.uid}`}
-                                        >
-                                            {/* className="px-4 py-1 bg-black text-gray-200 inline-flex items-center justify-center mt-2 mb-2">{tag.name} */}
-                                            <div className="mr-4 text-xs inline-flex items-center font-semibold bg-white bg-opacity-25 leading-sm uppercase px-3 py-1 border border-white text-white rounded-full">
-                                                <MoonIcon />
-                                                {tag.name}
-                                            </div>
-                                        </Link>
-                                    ))}
+                                concept.tags.slice(0, 2).map((tag) => (
+                                    <Link
+                                        key={tag.uid}
+                                        href={`/tag?uid=${tag.uid}`}
+                                    >
+                                        <a className="mr-4 text-xs inline-flex items-center font-semibold bg-white bg-opacity-25 leading-sm uppercase px-3 py-1 border border-white text-white rounded-full">
+                                            {tag.name}
+                                        </a>
+                                    </Link>
+                                ))}
                         </div>
                         <div className="flex mt-3">
                             <Image
@@ -90,21 +86,10 @@ export const LocationPage = () => {
                                         : concept.address.city}
                                     <p className="font-semibold text-gray-400 text-xs"> 14 Aug </p>
                                 </p> */}
-                                <div className="text-white ml-2 pt-2 relative">
-                                    <svg
-                                        className="w-5 h-5  inline-block align-bottom"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                                        />
-                                    </svg>
+                                <div className="flex items-center text-white ml-2 pt-2 relative">
+                                    <div className="w-5 h-5">
+                                        <SunIcon />
+                                    </div>
                                     {concept.geo.circle && (
                                         <span className=" text-base font-light inline-block align-center">
                                             {
@@ -128,25 +113,7 @@ export const LocationPage = () => {
                     <div>{parse(concept.description || '')}</div>
                 </div>
 
-                {/* {concept.geo.circle && (
-                    <DisplayMap
-                        markers={[
-                            {
-                                id: 1,
-                                link: `/location?uid=${concept.uid}`,
-                                name: concept.name,
-                                description: concept.description?.slice(0, 40),
-                                image: concept.image,
-                                coords: convertFromCoordsToGoogleMapsCoords(
-                                    concept.geo.circle.coordinates
-                                ),
-                            },
-                        ]}
-                        center={convertFromCoordsToGoogleMapsCoords(
-                            concept.geo.circle.coordinates
-                        )}
-                    />
-                )} */}
+                {concept.geo.circle && <LocationMap concepts={[concept]} />}
             </main>
         </div>
     );

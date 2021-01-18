@@ -1,8 +1,10 @@
 import { TableCell } from '@windmill/react-ui';
 import React from 'react';
 import { useQuery } from 'react-query';
+import { LocationMap } from 'src/components/googlemaps/display-map';
 import { getLocations } from '../api/middleapi/middleapi';
 import {
+    TableCellWithActions,
     TableCellWithBadge,
     TableCellWithNameDescriptionAndImage,
     // TableCellWithText,
@@ -26,23 +28,23 @@ const createTableFields = (data: any) => [
     ) : (
         <TableCell />
     ),
-    // <TableCellWithText text={new Date(data.date).toLocaleDateString()} />,
+    <TableCellWithActions actions={{ edit: `/edit/${data.uid}` }} />,
 ];
 
 export const LocationsPage = () => {
-    // const queryClient = useQueryClient();
     const { isLoading, isError, data, error } = useQuery(
         'locations',
         async () => await getLocations()
     );
     if (isLoading) return <p>Loading...</p>;
-    if (isError) {
+    if (isError || !data) {
         console.log(error);
         return <p>Error...</p>;
     }
     return (
         <div>
             <PageTitle>Locations</PageTitle>
+            <LocationMap concepts={data} />
             <TableWithActions
                 source={data}
                 tableTitles={[

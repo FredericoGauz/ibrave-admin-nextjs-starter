@@ -128,8 +128,10 @@ export const TableCellWithBadge = ({ badge }: { badge: IBadge | IBadge[] }) => {
     const badgesToRender = _.take(badges, 2);
     return (
         <TableCell>
-            {badgesToRender.map((b) => (
-                <Badge type={b.status || 'primary'}>{b.text}</Badge>
+            {badgesToRender.map((b, index) => (
+                <Badge key={index} type={b.status || 'primary'}>
+                    {b.text}
+                </Badge>
             ))}
             {badges.length > 2 && (
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
@@ -154,9 +156,11 @@ export const TableCellWithActions = ({
         <TableCell>
             <div className="flex items-center space-x-4">
                 {actions.edit && (
-                    <Button layout="link" size="small" aria-label="Edit">
-                        <EditIcon className="w-5 h-5" aria-hidden="true" />
-                    </Button>
+                    <Link href={actions.edit}>
+                        <Button layout="link" size="small" aria-label="Edit">
+                            <EditIcon className="w-5 h-5" aria-hidden="true" />
+                        </Button>
+                    </Link>
                 )}
                 {actions.delete && (
                     <Link href={actions.delete}>
