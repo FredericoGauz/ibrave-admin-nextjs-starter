@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import response from '../utils/demo/tableData';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import {
     Table,
@@ -22,19 +23,23 @@ const resultsPerPage = 10;
 const totalResults = response.length;
 
 export const TableWithActions = ({
+    source,
     createTableFields,
     tableTitles,
+    actions,
 }: {
+    source: any;
     createTableFields?: (data: any) => any[];
     tableTitles: string[];
+    actions?: ITableCellActions;
 }) => {
     const [page, setPage] = useState(1);
     const [data, setData] = useState([]);
     useEffect(() => {
         setData(
-            response.slice((page - 1) * resultsPerPage, page * resultsPerPage)
+            source.slice((page - 1) * resultsPerPage, page * resultsPerPage)
         );
-    }, [page]);
+    }, [page, source]);
     return (
         <TableContainer className="mb-8">
             <Table>
@@ -43,7 +48,6 @@ export const TableWithActions = ({
                         {tableTitles.map((s) => (
                             <TableCell>{s}</TableCell>
                         ))}
-                        <TableCell>Updated</TableCell>
                         <TableCell>Actions</TableCell>
                     </tr>
                 </TableHeader>
@@ -51,33 +55,6 @@ export const TableWithActions = ({
                     {data.map((user, i) => (
                         <TableRow key={i}>
                             {createTableFields && createTableFields(user)}
-                            <TableCellWithText
-                                text={new Date(user.date).toLocaleDateString()}
-                            />
-                            <TableCell>
-                                <div className="flex items-center space-x-4">
-                                    <Button
-                                        layout="link"
-                                        size="small"
-                                        aria-label="Edit"
-                                    >
-                                        <EditIcon
-                                            className="w-5 h-5"
-                                            aria-hidden="true"
-                                        />
-                                    </Button>
-                                    {/* <Button
-                                        layout="link"
-                                        size="icon"
-                                        aria-label="Delete"
-                                    >
-                                        <TrashIcon
-                                            className="w-5 h-5"
-                                            aria-hidden="true"
-                                        />
-                                    </Button> */}
-                                </div>
-                            </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
@@ -107,13 +84,15 @@ export const TableCellWithNameDescriptionAndImage = ({
         <TableCell>
             <div className="flex items-center text-sm">
                 <div className="mr-5">
-                    <Image
-                        className="hidden rounded-full md:block"
-                        src={image}
-                        alt="User avatar"
-                        width={50}
-                        height={50}
-                    />
+                    {image && (
+                        <Image
+                            className="hidden rounded-full md:block"
+                            src={image}
+                            alt="User avatar"
+                            width={50}
+                            height={50}
+                        />
+                    )}
                 </div>
                 <div>
                     <p className="mb-1 text-lg font-semibold dark:text-gray-300">
@@ -146,6 +125,36 @@ export const TableCellWithBadge = ({
     return (
         <TableCell>
             <Badge type={status || 'primary'}>{text}</Badge>
+        </TableCell>
+    );
+};
+
+interface ITableCellActions {
+    edit?: string;
+    delete?: string;
+}
+export const TableCellWithActions = ({
+    actions,
+}: {
+    actions: ITableCellActions;
+}) => {
+    if (Object.keys(actions).length < 1) return <React.Fragment />;
+    return (
+        <TableCell>
+            <div className="flex items-center space-x-4">
+                {actions.edit && (
+                    <Button layout="link" size="small" aria-label="Edit">
+                        <EditIcon className="w-5 h-5" aria-hidden="true" />
+                    </Button>
+                )}
+                {actions.delete && (
+                    <Link href={actions.delete}>
+                        <Button layout="link" size="small" aria-label="Delete">
+                            <TrashIcon className="w-5 h-5" aria-hidden="true" />
+                        </Button>
+                    </Link>
+                )}
+            </div>
         </TableCell>
     );
 };
