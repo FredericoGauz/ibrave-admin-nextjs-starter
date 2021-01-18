@@ -12,6 +12,7 @@ import { Windmill } from '@windmill/react-ui';
 import ProgressBar from '@badrap/bar-of-progress';
 import { Router } from 'next/router';
 import { SidebarProvider } from 'src/context/SidebarContext';
+import SimpleReactLightbox from 'simple-react-lightbox';
 
 const progress = new ProgressBar({
     size: 2,
@@ -50,17 +51,19 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Provider session={pageProps.session}>
                 <SidebarProvider>
                     <Windmill usePreferences>
-                        <AccessibleNavigationAnnouncer />
-                        <Title suffix="iBrave Admin">
-                            {meta.metaTitle || meta.title}
-                        </Title>
-                        <Description>{description}</Description>
-                        <Meta />
-                        <Layout {...layoutProps}>
-                            <WindmillLayout>
-                                <Component {...pageProps} />
-                            </WindmillLayout>
-                        </Layout>
+                        <SimpleReactLightbox>
+                            <AccessibleNavigationAnnouncer />
+                            <Title suffix="iBrave Admin">
+                                {meta.metaTitle || meta.title}
+                            </Title>
+                            <Description>{description}</Description>
+                            <Meta />
+                            <Layout {...layoutProps}>
+                                <WindmillLayout>
+                                    <Component {...pageProps} />
+                                </WindmillLayout>
+                            </Layout>
+                        </SimpleReactLightbox>
                     </Windmill>
                 </SidebarProvider>
                 <ReactQueryDevtools initialIsOpen={false} />
