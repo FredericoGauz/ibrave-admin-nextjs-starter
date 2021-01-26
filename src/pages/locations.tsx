@@ -34,7 +34,7 @@ const createTableFields = (data: any) => [
 export const LocationsPage = () => {
     const { isLoading, isError, data, error } = useQuery(
         'locations',
-        async () => await getLocations()
+        async () => await getLocations('isTip_null=true')
     );
     if (isLoading) return <p>Loading...</p>;
     if (isError || !data) {
