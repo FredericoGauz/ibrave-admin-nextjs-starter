@@ -45,16 +45,13 @@ function Header() {
                     onClick={toggleSidebar}
                     aria-label="Menu"
                 >
-                    <MenuIcon className="w-6 h-6" aria-hidden="true" />
+                    <MenuIcon className="w-6 h-6" />
                 </button>
                 {/* <!-- Search input --> */}
                 <div className="flex justify-center flex-1 lg:mr-32">
                     <div className="relative w-full max-w-xl mr-6 focus-within:text-purple-500">
                         <div className="absolute inset-y-0 flex items-center pl-2">
-                            <SearchIcon
-                                className="w-4 h-4"
-                                aria-hidden="true"
-                            />
+                            <SearchIcon className="w-4 h-4" />
                         </div>
                         <Input
                             className="pl-8 text-gray-700"
@@ -72,15 +69,9 @@ function Header() {
                             aria-label="Toggle color mode"
                         >
                             {mode === 'dark' ? (
-                                <SunIcon
-                                    className="w-5 h-5"
-                                    aria-hidden="true"
-                                />
+                                <SunIcon className="w-5 h-5" />
                             ) : (
-                                <MoonIcon
-                                    className="w-5 h-5"
-                                    aria-hidden="true"
-                                />
+                                <MoonIcon className="w-5 h-5" />
                             )}
                         </button>
                     </li>
@@ -92,12 +83,9 @@ function Header() {
                             aria-label="Notifications"
                             aria-haspopup="true"
                         >
-                            <BellIcon className="w-5 h-5" aria-hidden="true" />
+                            <BellIcon className="w-5 h-5" />
                             {/* <!-- Notification badge --> */}
-                            <span
-                                aria-hidden="true"
-                                className="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"
-                            ></span>
+                            <span className="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"></span>
                         </button>
 
                         <Dropdown
@@ -138,7 +126,6 @@ function Header() {
                                 className="align-middle"
                                 src="https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82"
                                 alt=""
-                                aria-hidden="true"
                             />
                         </button>
                         <Dropdown
@@ -147,24 +134,15 @@ function Header() {
                             onClose={() => setIsProfileMenuOpen(false)}
                         >
                             <DropdownItem tag="a" href="#">
-                                <OutlinePersonIcon
-                                    className="w-4 h-4 mr-3"
-                                    aria-hidden="true"
-                                />
+                                <OutlinePersonIcon className="w-4 h-4 mr-3" />
                                 <span>Profile</span>
                             </DropdownItem>
                             <DropdownItem tag="a" href="#">
-                                <OutlineCogIcon
-                                    className="w-4 h-4 mr-3"
-                                    aria-hidden="true"
-                                />
+                                <OutlineCogIcon className="w-4 h-4 mr-3" />
                                 <span>Settings</span>
                             </DropdownItem>
                             <DropdownItem onClick={() => alert('Log out!')}>
-                                <OutlineLogoutIcon
-                                    className="w-4 h-4 mr-3"
-                                    aria-hidden="true"
-                                />
+                                <OutlineLogoutIcon className="w-4 h-4 mr-3" />
                                 <span>Log out</span>
                             </DropdownItem>
                         </Dropdown>

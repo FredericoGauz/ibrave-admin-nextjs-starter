@@ -26,14 +26,10 @@ function SidebarSubmenu({ route }: { route: WindmillRoute }) {
                 aria-haspopup="true"
             >
                 <span className="inline-flex items-center">
-                    <Icon
-                        className="w-5 h-5"
-                        aria-hidden="true"
-                        icon={route.icon}
-                    />
+                    <Icon className="w-5 h-5" icon={route.icon} />
                     <span className="ml-4">{route.name}</span>
                 </span>
-                <DropdownIcon className="w-4 h-4" aria-hidden="true" />
+                <DropdownIcon className="w-4 h-4" />
             </button>
             <Transition
                 show={isDropdownMenuOpen}
