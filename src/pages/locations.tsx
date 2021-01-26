@@ -53,6 +53,7 @@ export const LocationsPage = () => {
                     // 'Last Updated',
                 ]}
                 createTableFields={createTableFields}
+                totalResults={data.length}
             />
         </div>
     );

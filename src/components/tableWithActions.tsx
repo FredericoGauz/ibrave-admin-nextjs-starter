@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import response from '../utils/demo/tableData';
 import Image from 'next/image';
 import Link from 'next/link';
 import _ from 'lodash';
@@ -21,18 +20,19 @@ import {
 import { EditIcon, TrashIcon } from '../icons';
 
 const resultsPerPage = 10;
-const totalResults = response.length;
 
 export const TableWithActions = ({
     source,
     createTableFields,
     tableTitles,
     actions,
+    totalResults,
 }: {
     source: any;
     createTableFields?: (data: any) => any[];
     tableTitles: string[];
     actions?: ITableCellActions;
+    totalResults: number;
 }) => {
     const [page, setPage] = useState(1);
     const [data, setData] = useState([]);
