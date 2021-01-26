@@ -1,10 +1,13 @@
 import { useSession } from 'next-auth/client';
 import React, { ReactNode } from 'react';
-import { PageTitle } from 'src/components/Typography/PageTitle';
+import { PageTitle } from '../components/Typography/PageTitle';
+import { useRouter } from 'next/router';
 // import { CTA } from '../components/CTA';
 export default function DashBoard() {
     const [session] = useSession();
+    const router = useRouter();
 
+    router.push('/locations');
     return (
         <main>
             {/* <CTA /> */}
