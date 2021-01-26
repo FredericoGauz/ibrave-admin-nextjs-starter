@@ -19,11 +19,6 @@ const containerStyle = {
     width: '100%',
     height: '400px',
 };
-
-const center: IGoogleMapsCoords = {
-    lat: -3.745,
-    lng: -38.523,
-};
 const libraries: Libraries = ['drawing'];
 
 export const Markers = (props: {
@@ -155,7 +150,7 @@ export const GoogleMapsWithDrawingTools = (
             if (!marker.coords) continue;
             if (marker.id === 'aberdeen-art-gallery') continue;
             console.log(marker.coords, marker);
-            bounds.extend(marker.coords);
+            bounds.extend(new window.google.maps.LatLng(marker.coords));
         }
         return bounds;
     };
@@ -168,7 +163,7 @@ export const GoogleMapsWithDrawingTools = (
             <div className="relative">
                 <GoogleMap
                     mapContainerStyle={containerStyle}
-                    center={{ lat: 55.860954, lng: -4.248633 }}
+                    center={props.center || { lat: 55.860954, lng: -4.248633 }}
                     zoom={14}
                     onLoad={onLoad}
                 >
@@ -205,7 +200,7 @@ export const GoogleMapsWithDrawingTools = (
 
 function MyComponent(props: {
     markers: IMarker[];
-    center?: IGoogleMapsCoords;
+    center: IGoogleMapsCoords;
     showDrawing?: boolean;
     onMarkerDragEnd?: any;
 }) {
@@ -232,7 +227,7 @@ function MyComponent(props: {
     return (
         <GoogleMapsWithDrawingTools
             markers={props.markers}
-            center={props.center || center}
+            center={props.center}
             showDrawing
             addShape={addShape}
             removeShape={removeShape}

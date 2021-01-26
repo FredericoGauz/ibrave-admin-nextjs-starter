@@ -6,7 +6,7 @@ export interface IGoogleMapsCoords { //TODO remove this declaration
 
 export interface IGoogleMaps {
     markers: IMarker[];
-    center: IGoogleMapsCoords;
+    center?: IGoogleMapsCoords;
     showDrawing?: boolean;
 }
 
@@ -24,5 +24,5 @@ export interface IMarker {
     link?: string;
     description?: string;
     image?: string;
-    coords: google.maps.LatLng;
+    coords: IGoogleMapsCoords;
 }

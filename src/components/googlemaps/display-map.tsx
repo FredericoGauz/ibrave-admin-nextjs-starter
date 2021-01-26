@@ -19,13 +19,7 @@ export const DisplayMap = (props: {
             <React.Fragment>
                 <GoogleMapsWithDrawingTools
                     markers={props.markers || []}
-                    center={
-                        props.center ||
-                        convertToGoogleMapsCoords([
-                            -22.988583821091783,
-                            -43.19312041324719,
-                        ])
-                    }
+                    // center={props.center ? props.center : { lat: 0, lng: 0 }}
                     onMarkerDragEnd={(
                         index: number,
                         coords: IGoogleMapsCoords
@@ -71,10 +65,14 @@ export const LocationMap = ({ concepts }: { concepts: any[] }) => {
     return (
         <DisplayMap
             markers={markers}
-            center={convertToGoogleMapsCoords([
-                55.86170798757062,
-                -4.2555425291118425,
-            ])}
+            // center={
+            //     markers && markers[0]
+            //         ? markers[0].coords
+            //         : convertToGoogleMapsCoords([
+            //               55.86170798757062,
+            //               -4.2555425291118425,
+            //           ])
+            // }
         />
     );
 };
