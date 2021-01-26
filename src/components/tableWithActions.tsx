@@ -46,8 +46,8 @@ export const TableWithActions = ({
             <Table>
                 <TableHeader>
                     <tr>
-                        {tableTitles.map((s) => (
-                            <TableCell>{s}</TableCell>
+                        {tableTitles.map((s, index) => (
+                            <TableCell key={index}>{s}</TableCell>
                         ))}
                         {actions && <TableCell>Actions</TableCell>}
                     </tr>
@@ -158,14 +158,14 @@ export const TableCellWithActions = ({
                 {actions.edit && (
                     <Link href={actions.edit}>
                         <Button layout="link" size="small" aria-label="Edit">
-                            <EditIcon className="w-5 h-5" aria-hidden="true" />
+                            <EditIcon className="w-5 h-5" />
                         </Button>
                     </Link>
                 )}
                 {actions.delete && (
                     <Link href={actions.delete}>
                         <Button layout="link" size="small" aria-label="Delete">
-                            <TrashIcon className="w-5 h-5" aria-hidden="true" />
+                            <TrashIcon className="w-5 h-5" />
                         </Button>
                     </Link>
                 )}

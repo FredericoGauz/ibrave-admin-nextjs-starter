@@ -1,5 +1,5 @@
 module.exports = {
     images: {
-        domains: ['avatarfiles.alphacoders.com', 'ibrave.gauzstudio.com'],
+        domains: ['www.gravatar.com', 'ibrave.gauzstudio.com'],
     },
 };

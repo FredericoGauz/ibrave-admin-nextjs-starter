@@ -77,6 +77,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash", "npm:4.17.20"],
             ["next", "virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:10.0.5"],
             ["next-auth", "virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:3.1.0"],
+            ["node-gravatar", "npm:1.0.2"],
             ["npm-run-all", "npm:4.1.5"],
             ["postcss", "npm:8.2.1"],
             ["postcss-selector-parser", "npm:6.0.4"],
@@ -7996,6 +7997,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash", "npm:4.17.20"],
             ["next", "virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:10.0.5"],
             ["next-auth", "virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:3.1.0"],
+            ["node-gravatar", "npm:1.0.2"],
             ["npm-run-all", "npm:4.1.5"],
             ["postcss", "npm:8.2.1"],
             ["postcss-selector-parser", "npm:6.0.4"],
@@ -8074,6 +8076,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.1-46c670dbc1-cbb171635e.zip/node_modules/node-fetch/",
           "packageDependencies": [
             ["node-fetch", "npm:2.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["node-gravatar", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/node-gravatar-npm-1.0.2-e5757660db-cea3d8dadb.zip/node_modules/node-gravatar/",
+          "packageDependencies": [
+            ["node-gravatar", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]

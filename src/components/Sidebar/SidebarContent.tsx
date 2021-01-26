@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Icons from '../../icons';
 import SidebarSubmenu from './SidebarSubmenu';
-import { Button } from '@windmill/react-ui';
+// import { Button } from '@windmill/react-ui';
 import Link from 'next/link';
 
 function Icon({ icon, ...props }: { icon: any; className?: string }) {
@@ -18,7 +18,7 @@ export interface WindmillRoute {
 }
 const routes = [
     { name: 'Locations', path: '/locations', icon: 'FormsIcon' },
-    { name: 'Account', path: '/account', icon: 'PeopleIcon' },
+    { name: 'Accounts', path: '/account', icon: 'PeopleIcon' },
 ];
 
 function SidebarContent() {
@@ -41,13 +41,9 @@ function SidebarContent() {
                                     className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                                     // activeClassName="text-gray-800 dark:text-gray-100"
                                 >
-                                    <span
-                                        className="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                                        aria-hidden="true"
-                                    ></span>
+                                    <span className="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"></span>
                                     <Icon
                                         className="w-5 h-5"
-                                        aria-hidden="true"
                                         icon={route.icon}
                                     />
                                     <span className="ml-4">{route.name}</span>
@@ -57,14 +53,12 @@ function SidebarContent() {
                     )
                 )}
             </ul>
-            <div className="px-6 my-6">
+            {/* <div className="px-6 my-6">
                 <Button>
                     Create account
-                    <span className="ml-2" aria-hidden="true">
-                        +
-                    </span>
+                    <span className="ml-2">+</span>
                 </Button>
-            </div>
+            </div> */}
         </div>
     );
 }

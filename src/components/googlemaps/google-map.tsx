@@ -143,6 +143,7 @@ export const GoogleMapsWithDrawingTools = (
         googleMapsApiKey: 'AIzaSyCGZTW_vWRYKr8QIqdDQEjMnNf1DfkADKA',
         libraries: libraries,
     });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [center, setCenter] = useState(props.center);
     const getBoundingBox = () => {
         const bounds = new window.google.maps.LatLngBounds();

@@ -7,3 +7,4 @@ declare module '*.svg' {
 }
 
 declare module 'simple-react-lightbox';
+declare module 'node-gravatar';

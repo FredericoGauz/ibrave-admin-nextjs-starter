@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import {
-    convertFromCoordsToGoogleMapsCoords,
-    convertToGoogleMapsCoords,
-} from '../../api/middleapi/middleapi';
+import { convertFromCoordsToGoogleMapsCoords } from '../../api/middleapi/middleapi';
 import { GoogleMapsWithDrawingTools } from './google-map';
 import { IMarker, IGoogleMapsCoords } from './types';
 
