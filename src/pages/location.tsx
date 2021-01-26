@@ -96,7 +96,7 @@ export const LocationPage = () => {
                                                 concept.geo.circle.coordinates
                                                     .latitude
                                             }
-                                            ,{' '}
+                                            ,
                                             {
                                                 concept.geo.circle.coordinates
                                                     .longitude
@@ -109,7 +109,7 @@ export const LocationPage = () => {
                     </div>
                 </div>
 
-                <div className="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed">
+                <div className="px-4 lg:px-0 my-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed dark:text-white">
                     <div>{parse(concept.description || '')}</div>
                 </div>
 
