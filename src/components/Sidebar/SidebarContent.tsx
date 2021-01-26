@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import * as Icons from '../../icons';
 import SidebarSubmenu from './SidebarSubmenu';
 // import { Button } from '@windmill/react-ui';
@@ -24,12 +25,17 @@ const routes = [
 function SidebarContent() {
     return (
         <div className="py-4 text-gray-500 dark:text-gray-400">
-            <a
-                className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
-                href="#"
-            >
-                Windmill
-            </a>
+            <Link href="/">
+                <a className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200">
+                    <Image
+                        className="bg-blue"
+                        src="/vertical-full-logo-and-name-gray.png"
+                        alt=""
+                        height={35}
+                        width={150}
+                    />
+                </a>
+            </Link>
             <ul className="mt-6">
                 {routes.map((route: any) =>
                     route.routes ? (
