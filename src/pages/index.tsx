@@ -4,6 +4,7 @@ import { PageTitle } from 'src/components/Typography/PageTitle';
 // import { CTA } from '../components/CTA';
 export default function DashBoard() {
     const [session] = useSession();
+
     return (
         <main>
             {/* <CTA /> */}

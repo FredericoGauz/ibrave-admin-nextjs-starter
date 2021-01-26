@@ -13,7 +13,6 @@ import ProgressBar from '@badrap/bar-of-progress';
 import { Router } from 'next/router';
 import { SidebarProvider } from 'src/context/SidebarContext';
 import SimpleReactLightbox from 'simple-react-lightbox';
-
 const progress = new ProgressBar({
     size: 2,
     color: '#22D3EE',
@@ -36,6 +35,19 @@ Router.events.on('routeChangeComplete', () => {
 Router.events.on('routeChangeError', progress.finish);
 
 const queryClient = new QueryClient();
+
+export const getServerSideProps = async function () {
+    const user = window.localStorage.getItem('user');
+
+    if (!user) {
+        return {
+            redirect: {
+                destination: '/signin',
+                permanent: false,
+            },
+        };
+    }
+};
 
 function MyApp({ Component, pageProps }: AppProps) {
     const Layout = (Component as any).layoutProps?.Layout || React.Fragment;

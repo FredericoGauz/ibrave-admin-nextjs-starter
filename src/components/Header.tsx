@@ -18,6 +18,7 @@ import {
     DropdownItem,
     WindmillContext,
 } from '@windmill/react-ui';
+import { signOut } from 'src/api/auth';
 
 function Header() {
     const { mode, toggleMode } = useContext(WindmillContext);
@@ -76,7 +77,7 @@ function Header() {
                         </button>
                     </li>
                     {/* <!-- Notifications menu --> */}
-                    <li className="relative">
+                    {/* <li className="relative">
                         <button
                             className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple"
                             onClick={handleNotificationsClick}
@@ -84,7 +85,6 @@ function Header() {
                             aria-haspopup="true"
                         >
                             <BellIcon className="w-5 h-5" />
-                            {/* <!-- Notification badge --> */}
                             <span className="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"></span>
                         </button>
 
@@ -113,7 +113,7 @@ function Header() {
                                 <span>Alerts</span>
                             </DropdownItem>
                         </Dropdown>
-                    </li>
+                    </li> */}
                     {/* <!-- Profile menu --> */}
                     <li className="relative">
                         <button
@@ -124,7 +124,7 @@ function Header() {
                         >
                             <Avatar
                                 className="align-middle"
-                                src="https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82"
+                                src={'/profile.jpg'}
                                 alt=""
                             />
                         </button>
@@ -133,15 +133,19 @@ function Header() {
                             isOpen={isProfileMenuOpen}
                             onClose={() => setIsProfileMenuOpen(false)}
                         >
-                            <DropdownItem tag="a" href="#">
+                            {/* <DropdownItem tag="a" href="#">
                                 <OutlinePersonIcon className="w-4 h-4 mr-3" />
                                 <span>Profile</span>
                             </DropdownItem>
                             <DropdownItem tag="a" href="#">
                                 <OutlineCogIcon className="w-4 h-4 mr-3" />
                                 <span>Settings</span>
-                            </DropdownItem>
-                            <DropdownItem onClick={() => alert('Log out!')}>
+                            </DropdownItem> */}
+                            <DropdownItem
+                                onClick={() => {
+                                    signOut();
+                                }}
+                            >
                                 <OutlineLogoutIcon className="w-4 h-4 mr-3" />
                                 <span>Log out</span>
                             </DropdownItem>
