@@ -19,10 +19,10 @@ export interface IGoogleMapsWithDrawindTools extends IGoogleMaps {
 }
 
 export interface IMarker {
-    id: number;
+    id: string;
     name: string;
     link?: string;
     description?: string;
     image?: string;
-    coords: { lat: number; lng: number };
+    coords: google.maps.LatLng;
 }

@@ -58,12 +58,8 @@ export const LocationMap = ({ concepts }: { concepts: any[] }) => {
     const filteredConcepts = concepts.filter(
         (c) => c.geo && c.geo.circle !== undefined
     );
-    filteredConcepts.forEach((c) => {
-        if (c.geo && c.geo.circle)
-            if (!c.geo.circle.coordinates) console.log(c);
-    });
     const markers = filteredConcepts.map((concept: any) => ({
-        id: 1,
+        id: concept.uid,
         link: `/location?id=${concept.uid}`,
         name: concept.name,
         description: concept.description?.slice(0, 40),
@@ -72,13 +68,13 @@ export const LocationMap = ({ concepts }: { concepts: any[] }) => {
             concept.geo.circle.coordinates
         ),
     }));
-
     return (
         <DisplayMap
             markers={markers}
-            center={convertFromCoordsToGoogleMapsCoords(
-                concepts[0].geo.circle.coordinates
-            )}
+            center={convertToGoogleMapsCoords([
+                55.86170798757062,
+                -4.2555425291118425,
+            ])}
         />
     );
 };

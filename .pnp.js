@@ -45,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tailwindcss/forms", "npm:0.2.1"],
             ["@tailwindcss/typography", "virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:0.3.1"],
             ["@types/classnames", "npm:2.2.11"],
+            ["@types/googlemaps", "npm:3.43.2"],
             ["@types/lodash", "npm:4.14.167"],
             ["@types/next-auth", "npm:3.1.21"],
             ["@types/node", "npm:14.14.21"],
@@ -105,14 +106,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["@ampproject/toolbox-optimizer", [
         ["npm:2.7.1-alpha.0", {
-          "packageLocation": "./.yarn/unplugged/@ampproject-toolbox-optimizer-virtual-b5f0f40ece/node_modules/@ampproject/toolbox-optimizer/",
+          "packageLocation": "./.yarn/cache/@ampproject-toolbox-optimizer-npm-2.7.1-alpha.0-3cbce502bd-b82887a0b7.zip/node_modules/@ampproject/toolbox-optimizer/",
           "packageDependencies": [
             ["@ampproject/toolbox-optimizer", "npm:2.7.1-alpha.0"]
           ],
           "linkType": "SOFT",
         }],
         ["virtual:39b940d328fd4884208ad219cae69a00c80a851fc0b480f82f8a2fa8eb5619ac17d07cc67823d264b636e4905747d82eecc24b2d21207a3f9a2b8f8b05220767#npm:2.7.1-alpha.0", {
-          "packageLocation": "./.yarn/unplugged/@ampproject-toolbox-optimizer-virtual-b5f0f40ece/node_modules/@ampproject/toolbox-optimizer/",
+          "packageLocation": "./.yarn/$$virtual/@ampproject-toolbox-optimizer-virtual-b5f0f40ece/0/cache/@ampproject-toolbox-optimizer-npm-2.7.1-alpha.0-3cbce502bd-b82887a0b7.zip/node_modules/@ampproject/toolbox-optimizer/",
           "packageDependencies": [
             ["@ampproject/toolbox-optimizer", "virtual:39b940d328fd4884208ad219cae69a00c80a851fc0b480f82f8a2fa8eb5619ac17d07cc67823d264b636e4905747d82eecc24b2d21207a3f9a2b8f8b05220767#npm:2.7.1-alpha.0"],
             ["@ampproject/toolbox-core", "npm:2.7.4"],
@@ -779,6 +780,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-classnames-npm-2.2.11-442af4f8b3-5bbd4fd0f8.zip/node_modules/@types/classnames/",
           "packageDependencies": [
             ["@types/classnames", "npm:2.2.11"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/googlemaps", [
+        ["npm:3.43.2", {
+          "packageLocation": "./.yarn/cache/@types-googlemaps-npm-3.43.2-367d969a96-1bf8ffa49f.zip/node_modules/@types/googlemaps/",
+          "packageDependencies": [
+            ["@types/googlemaps", "npm:3.43.2"]
           ],
           "linkType": "HARD",
         }]
@@ -3185,7 +3195,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js-pure", [
         ["npm:3.7.0", {
-          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.7.0-213dcef0c2/node_modules/core-js-pure/",
+          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.7.0-213dcef0c2-7fdff8bda2.zip/node_modules/core-js-pure/",
           "packageDependencies": [
             ["core-js-pure", "npm:3.7.0"]
           ],
@@ -5846,7 +5856,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["highlight.js", [
         ["npm:9.18.5", {
-          "packageLocation": "./.yarn/unplugged/highlight.js-npm-9.18.5-571500f48d/node_modules/highlight.js/",
+          "packageLocation": "./.yarn/cache/highlight.js-npm-9.18.5-571500f48d-dea74c216c.zip/node_modules/highlight.js/",
           "packageDependencies": [
             ["highlight.js", "npm:9.18.5"]
           ],
@@ -7954,6 +7964,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tailwindcss/forms", "npm:0.2.1"],
             ["@tailwindcss/typography", "virtual:089b4a25135bf88c46a81ace29f8e7932c13328a7807851b971518837acdfa40262c4d5efb8c77a793f05b7c9d17d84e3c067c2733377a7a1fc21be7368f3ca7#npm:0.3.1"],
             ["@types/classnames", "npm:2.2.11"],
+            ["@types/googlemaps", "npm:3.43.2"],
             ["@types/lodash", "npm:4.14.167"],
             ["@types/next-auth", "npm:3.1.21"],
             ["@types/node", "npm:14.14.21"],

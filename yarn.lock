@@ -548,6 +548,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/googlemaps@npm:^3.43.2":
+  version: 3.43.2
+  resolution: "@types/googlemaps@npm:3.43.2"
+  checksum: 1bf8ffa49f8be8315e39753be11a1392efa1690a676e1f99d6d45e8b96be223cdfbe94c10e423fb0a41906993938399db70b7ed5b74f82e6fad5237d0b2bdbb9
+  languageName: node
+  linkType: hard
+
 "@types/js-cookie@npm:2.2.6":
   version: 2.2.6
   resolution: "@types/js-cookie@npm:2.2.6"
@@ -6612,6 +6619,7 @@ fsevents@~2.1.2:
     "@tailwindcss/forms": 0.2.1
     "@tailwindcss/typography": 0.3.1
     "@types/classnames": 2.2.11
+    "@types/googlemaps": ^3.43.2
     "@types/lodash": ^4.14.167
     "@types/next-auth": ^3.1.21
     "@types/node": ^14.14.21

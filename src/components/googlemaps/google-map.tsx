@@ -3,8 +3,8 @@ import {
     DrawingManager,
     GoogleMap,
     InfoWindow,
-    LoadScript,
     Marker,
+    useJsApiLoader,
 } from '@react-google-maps/api';
 import Link from 'next/link';
 import {
@@ -13,9 +13,10 @@ import {
     IMarker,
 } from './types';
 import parse from 'html-react-parser';
+import { Libraries } from '@react-google-maps/api/dist/utils/make-load-script-url';
 
 const containerStyle = {
-    width: '800px',
+    width: '100%',
     height: '400px',
 };
 
@@ -23,7 +24,7 @@ const center: IGoogleMapsCoords = {
     lat: -3.745,
     lng: -38.523,
 };
-const libraries = ['drawing'];
+const libraries: Libraries = ['drawing'];
 
 export const Markers = (props: {
     markers: IMarker[];
@@ -45,11 +46,12 @@ export const Markers = (props: {
     const closeInfoWindow = (id: number) => {
         setinfoWindows(infoWindows.filter((w: number) => w !== id));
     };
-
     return (
         <React.Fragment>
             {props.markers.map((marker, index) => {
-                const showInfoWindow = infoWindows.includes(marker.id);
+                const id = marker.id;
+                //@ts-ignore
+                const showInfoWindow = infoWindows.includes(id);
                 return (
                     <React.Fragment key={index}>
                         <MarkerComponent
@@ -110,6 +112,7 @@ export const MarkerComponent = (props: {
                 <InfoWindow
                     position={props.marker.coords}
                     options={{
+                        //@ts-ignore
                         pixelOffset: { width: 0, height: -30 },
                     }}
                     onCloseClick={() => props.closeInfoWindow(props.marker.id)}
@@ -141,17 +144,33 @@ export const MarkerComponent = (props: {
 export const GoogleMapsWithDrawingTools = (
     props: IGoogleMapsWithDrawindTools
 ) => {
-    return (
-        <div className="relative">
-            <LoadScript
-                googleMapsApiKey="AIzaSyCGZTW_vWRYKr8QIqdDQEjMnNf1DfkADKA"
-                //@ts-ignore
-                libraries={libraries}
-            >
+    const { isLoaded, loadError } = useJsApiLoader({
+        googleMapsApiKey: 'AIzaSyCGZTW_vWRYKr8QIqdDQEjMnNf1DfkADKA',
+        libraries: libraries,
+    });
+    const [center, setCenter] = useState(props.center);
+    const getBoundingBox = () => {
+        const bounds = new window.google.maps.LatLngBounds();
+        for (const marker of props.markers) {
+            if (!marker.coords) continue;
+            if (marker.id === 'aberdeen-art-gallery') continue;
+            console.log(marker.coords, marker);
+            bounds.extend(marker.coords);
+        }
+        return bounds;
+    };
+    const renderMap = () => {
+        const onLoad = function onLoad() {
+            const newCenter = getBoundingBox().getCenter();
+            setCenter((newCenter as unknown) as IGoogleMapsCoords);
+        };
+        return (
+            <div className="relative">
                 <GoogleMap
                     mapContainerStyle={containerStyle}
-                    center={props.center}
-                    zoom={16}
+                    center={{ lat: 55.860954, lng: -4.248633 }}
+                    zoom={14}
+                    onLoad={onLoad}
                 >
                     {props.showDrawing && (
                         <DrawingManager
@@ -172,10 +191,16 @@ export const GoogleMapsWithDrawingTools = (
                     />
                     <></>
                 </GoogleMap>
-            </LoadScript>
-            {/* <button type="button" onClick={props.removeAllShapes} className="absolute right-0 z-10 px-4 py-2 text-indigo-100 bg-indigo-600" style={{bottom:220}}>Clear All</button> */}
-        </div>
-    );
+                {/* <button type="button" onClick={props.removeAllShapes} className="absolute right-0 z-10 px-4 py-2 text-indigo-100 bg-indigo-600" style={{bottom:220}}>Clear All</button> */}
+            </div>
+        );
+    };
+
+    if (loadError) {
+        return <div>Map cannot be loaded right now, sorry.</div>;
+    }
+
+    return isLoaded ? renderMap() : <p>Loading...</p>;
 };
 
 function MyComponent(props: {
